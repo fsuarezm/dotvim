@@ -35,6 +35,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'mxw/vim-jsx', { 'for': ['javascript', 'javascript.jsx'] }
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'tobyS/vmustache'
@@ -233,6 +234,7 @@ hi Normal guibg=black guifg=white
 " let g:airline_theme='luna'
 let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
 
 "-----------------------------------------------------------------------
 " GUI Settings {
