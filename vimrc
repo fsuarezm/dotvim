@@ -12,8 +12,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
+" ----
 " Plugin 'Solarized'
-Plugin 'cormacrelf/vim-colors-github'
+" Plugin 'cormacrelf/vim-colors-github'
+" Plugin 'chriskempson/base16-vim'
+Plugin 'NLKNguyen/papercolor-theme'
+" ----
+
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'bockel/potwiki.vim'
@@ -223,21 +228,22 @@ command -nargs=1 Find call SearchWiki(<f-args>)
 " let g:solarized_termcolors=16
 " let g:solarized_termtrans=0
 " let g:solarized_menu=0
-" let g:solarized_italic=0
+" let g:solarized_italic=1
+" let g:solarized_bold=1
 " set t_Co=16
+set t_Co=256
 syntax enable
-let g:github_colors_soft=1
+" let g:github_colors_soft=1
 set background=dark
+colorscheme PaperColor
 " colorscheme solarized
-colorscheme github
+" colorscheme github
 
 " Change background and foreground color
 hi Normal guibg=black guifg=white
 
 " let g:airline_theme='luna'
 let g:airline_theme='papercolor'
-" let g:airline_theme='github'
-" let g:lightline = { 'colorscheme': 'github' }
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -368,17 +374,19 @@ nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>:o<CR>
 
 " solarized toggle background
 function! ToggleBackground()
-    "if (w:solarized_style=="dark")
+    " if (w:solarized_style=="dark")
     if (&background=="dark")
         " let w:solarized_style="light"
         " colorscheme solarized
         set background=light
-        colorscheme github
+        " colorscheme github
+        colorscheme PaperColor
     else
         " let w:solarized_style="dark"
         " colorscheme solarized
         set background=dark
-        colorscheme github
+        " colorscheme github
+        colorscheme PaperColor
     endif
 endfunction
 command! Togbg call ToggleBackground()
