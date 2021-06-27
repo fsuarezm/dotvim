@@ -364,12 +364,12 @@ nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>:o<CR>
 " solarized toggle background
 function! ToggleBackground()
     if (w:solarized_style=="dark")
-    let w:solarized_style="light"
-    colorscheme solarized
-else
-    let w:solarized_style="dark"
-    colorscheme solarized
-endif
+        let w:solarized_style="light"
+        colorscheme solarized
+    else
+        let w:solarized_style="dark"
+        colorscheme solarized
+    endif
 endfunction
 command! Togbg call ToggleBackground()
 nnoremap <leader>b :call ToggleBackground()<CR>
