@@ -1,0 +1,5 @@
+if has("unix")
+    map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+else
+    map ,e :e <C-R>=expand("%:p:h") . "\" <CR>
+endif
